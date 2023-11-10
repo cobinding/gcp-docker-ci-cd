@@ -1,4 +1,3 @@
----
 steps:
   # mvn 설치
   - name: maven:3.8.1-openjdk-17
@@ -14,8 +13,8 @@ steps:
     args: [ 'push',
             'us-west1-docker.pkg.dev/${PROJECT_ID}/test/changtalk/test:latest' ]
   # 3. Cloud Run 동작
- #  - name: 'gcr.io/cloud-builders/gcloud'
- # ㅌ   script: |
+  # - name: 'gcr.io/cloud-builders/gcloud'
+  # - script: |
   #     gcloud run deploy changtalk-run --image us-west1-docker.pkg.dev/quixotic-skill-402605/test/changtalk/test --region us-west2 --platform managed --allow-unauthenticated
 
 options:
